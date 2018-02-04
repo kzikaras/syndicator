@@ -9,12 +9,12 @@ scheduler.every '1h' do
         #parse out minutes from created at time
         created = event.created_at.to_s
         created_list = created.split(' ')
-        create_time = created[1].to_i
+        create_time = created_list[1].split(':')[1].to_i
 
         #parse out minutes/hours from current time
         time_now = Time.now.to_s
         time_now_list = time_now.split(' ')
-        current_time = time_now_list[1].to_i
+        current_time = time_now_list[1].split(':')[1].to_i
 
         #if day is the current day test further
         if time_now_list[0] === created_list[0]
