@@ -1,0 +1,10 @@
+<h1>Pulsd Events Dashboard</h1>
+<%= link_to "New Event", new_event_path, class:"button" %>
+<% @events.each do |event| %>
+    <div class="event">
+        <h2><%= event.title %></h2>
+        <p>Venue: <%= event.venue %></p>
+        <p>Price: <%= event.price %></p>
+        <p>Description: <%= event.description %>
+    </div>
+<% end %>

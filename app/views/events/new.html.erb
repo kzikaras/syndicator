@@ -1,0 +1,12 @@
+<h1>New Event</h1>
+<%= form_for @event, url: {action: "create"} do %>
+    <%= label_tag :title, "Event Title", class:"input" %>
+    <%= text_field_tag :title %>
+    <%= label_tag :price, "Event price", class:"input" %>
+    <%= text_field_tag :price %>
+    <%= label_tag :venue, "Event venue", class:"input" %>
+    <%= text_field_tag :venue %>
+    <%= label_tag :description, "Event description", class:"input" %>
+    <%= text_area_tag :description %>
+    <%= submit_tag "Submit", class:"submit button" %>
+<% end %>
