@@ -18,7 +18,7 @@ scheduler.every '1h' do
 
         #if day is the current day test further
         if time_now_list[0] === created_list[0]
-            #if difference between timeNow and created at is < 60 mins push event to websites
+            #if difference between timeNow and created at is < 60 mins (it was created within the last hour) push event to websites
             difference = current_time - create_time
             if difference < 60
                 #news day code
